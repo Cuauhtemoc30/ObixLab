@@ -179,7 +179,7 @@ function App() {
             <div className="bg-gray-100 rounded-3xl p-6 text-center">
               <div className="bg-white rounded-2xl overflow-hidden mb-4 shadow-md">
                 <img
-                  src="src/img/image9.png"
+                  src="https://cdn.pixabay.com/photo/2025/01/26/01/59/man-9360063_1280.png"
                   alt="Cuauhtémoc Montoya"
                   className="w-full h-48 object-cover"
                 />
