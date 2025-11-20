@@ -4,7 +4,7 @@ import { Wrench, Twitter, Facebook, Instagram, Menu, X } from 'lucide-react';
 import fotoSara from "./img/foto_sara.jpg";
 import fotoTony from "./img/foto_tony.jpg";
 import fotoCuauh from "./img/foto_cuauh.png";
-import fotoDani from "./img/foto_dani.png"; // 🔥 NUEVO: imagen de Dani sin bordes
+import fotoDani from "./img/foto_dani.png";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
