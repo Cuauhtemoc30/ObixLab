@@ -4,7 +4,8 @@ import { Wrench, Twitter, Facebook, Instagram, Menu, X } from 'lucide-react';
 import fotoSara from "./img/foto_sara.jpg";
 import fotoTony from "./img/foto_tony.jpg";
 import fotoCuauh from "./img/foto_cuauh.png";
-import fotoDani from "./img/foto_dani.png";
+import fotoDani from "./img/foto_dani.jpg"; 
+import fotoJesus from "./img/foto_jesus.jpg"; 
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -171,12 +172,12 @@ function App() {
               {
                 name: 'Jesus Morales',
                 role: 'Backend',
-                img: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+                img: fotoJesus,
               },
               {
                 name: 'Daniel Estrada',
                 role: 'Desarrollador de videojuegos',
-                img: fotoDani,           // 🔥 Ahora usa su foto real
+                img: fotoDani,          
               },
               {
                 name: 'Antonio Urrutia',
@@ -199,7 +200,7 @@ function App() {
                       ${
                         member.img === fotoTony ||
                         member.img === fotoCuauh ||
-                        member.img === fotoDani // 🔥 también escala para eliminar bordes grises
+                        member.img === fotoDani 
                           ? "scale-125"
                           : ""
                       }
