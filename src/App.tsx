@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Wrench, Twitter, Facebook, Instagram, Menu, X } from 'lucide-react';
+
 import fotoSara from "./img/foto_sara.jpg";
 import fotoTony from "./img/foto_tony.jpg";
 import fotoCuauh from "./img/foto_cuauh.png";
+import fotoDani from "./img/foto_dani.png"; 
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +15,7 @@ function App() {
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
+
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img src="/icono.png" alt="ObixLab Logo" className="w-12 h-12" />
@@ -71,6 +74,7 @@ function App() {
               </div>
             </div>
           </div>
+
           <div className="relative mt-8 lg:mt-0">
             <div className="bg-gray-200 rounded-3xl overflow-hidden shadow-xl">
               <img
@@ -79,6 +83,7 @@ function App() {
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div className="absolute -bottom-6 left-8 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
               <div className="bg-yellow-400 p-2 rounded-lg">
                 <Wrench className="w-6 h-6 text-gray-800" />
@@ -88,6 +93,7 @@ function App() {
                 <div className="text-sm text-gray-600">Operador de grua</div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -96,6 +102,7 @@ function App() {
       <section id="about" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-bold text-center mb-16">Acerca de ObixLab</h2>
+
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
@@ -108,6 +115,7 @@ function App() {
                 Buscamos ser líderes en innovación tecnológica para la construcción. Aspiramos a transformar la manera en que se gestiona el trabajo, creando soluciones prácticas y confiables que reduzcan el estrés, ahorren tiempo y mejoren los resultados para todos los involucrados.
               </p>
             </div>
+
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative inline-block">
                 <div className="flex gap-4">
@@ -140,15 +148,17 @@ function App() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* Team Section */}
       <section id="team" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <h2 className="text-5xl font-bold text-center mb-8">Nuestro equipo de trabajo</h2>
-          <p className="text-center text-gray-700 italic max-w-4xl mx-auto mb-16 text-lg leading-relaxed">
-            Un equipo de trabajo es un grupo de personas que colaboran con una meta en común. Cada miembro aporta sus habilidades y conocimientos únicos para alcanzar objetivos compartidos.
+          <p className="text-center text-gray-700 italic max-w-4xl mx-auto mb-16 text-lg">
+            Un equipo de trabajo es un grupo de personas que colaboran con una meta en común. Cada miembro aporta sus habilidades y conocimientos únicos.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -166,7 +176,7 @@ function App() {
               {
                 name: 'Daniel Estrada',
                 role: 'Desarrollador de videojuegos',
-                img: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+                img: fotoDani,          
               },
               {
                 name: 'Antonio Urrutia',
@@ -180,17 +190,23 @@ function App() {
               },
             ].map((member, index) => (
               <div key={index} className="bg-gray-100 rounded-3xl p-6 text-center">
+                
                 <div className="bg-white rounded-2xl overflow-hidden mb-4 shadow-md">
                   <img
                     src={member.img}
                     alt={member.name}
-                    className={`w-full h-48 object-cover object-center rounded-2xl ${
-                      member.img === fotoTony || member.img === fotoCuauh
-                        ? "scale-125"
-                        : ""
-                    }`}
+                    className={`w-full h-48 object-cover object-center rounded-2xl
+                      ${
+                        member.img === fotoTony ||
+                        member.img === fotoCuauh ||
+                        member.img === fotoDani 
+                          ? "scale-125"
+                          : ""
+                      }
+                    `}
                   />
                 </div>
+
                 <h3 className="font-bold text-lg">{member.name}</h3>
                 <p className="text-gray-600 italic">{member.role}</p>
               </div>
@@ -204,15 +220,18 @@ function App() {
       <footer className="bg-white border-t py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+
             <div className="text-sm text-gray-600 space-y-1">
               <div>Declaración de Accesibilidad</div>
               <div>Términos y Condiciones</div>
             </div>
+
             <div className="text-sm text-gray-600 space-y-1">
               <div className="font-semibold">Contáctanos</div>
               <div>Tel: 123-456-7890</div>
               <div>Correo: obixlab@gmail.com</div>
             </div>
+
             <div className="space-y-2">
               <div className="text-sm text-gray-600 font-semibold">Síguenos en</div>
               <div className="flex gap-4">
@@ -221,6 +240,7 @@ function App() {
                 <Instagram className="w-6 h-6 text-gray-600 hover:text-gray-900 cursor-pointer" />
               </div>
             </div>
+
           </div>
         </div>
       </footer>
