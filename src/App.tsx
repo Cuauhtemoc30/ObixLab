@@ -4,7 +4,6 @@ import fotoSara from "./img/foto_sara.jpg";
 import fotoTony from "./img/foto_tony.jpg";
 import fotoCuauh from "./img/foto_cuauh.png";
 
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -39,27 +38,9 @@ function App() {
           {/* Menú móvil */}
           {menuOpen && (
             <nav className="flex flex-col gap-4 mt-4 pb-4 border-t md:hidden">
-              <a
-                href="#home"
-                className="text-gray-700 hover:text-gray-900 font-medium"
-                onClick={() => setMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-gray-700 hover:text-gray-900 font-medium"
-                onClick={() => setMenuOpen(false)}
-              >
-                Acerca de ObixLab
-              </a>
-              <a
-                href="#team"
-                className="text-gray-700 hover:text-gray-900 font-medium"
-                onClick={() => setMenuOpen(false)}
-              >
-                Equipo de Trabajo
-              </a>
+              <a href="#home" className="text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Home</a>
+              <a href="#about" className="text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Acerca de ObixLab</a>
+              <a href="#team" className="text-gray-700 hover:text-gray-900 font-medium" onClick={() => setMenuOpen(false)}>Equipo de Trabajo</a>
             </nav>
           )}
         </div>
@@ -133,18 +114,19 @@ function App() {
                   <div className="w-56 h-56 rounded-full overflow-hidden bg-gray-200 shadow-lg">
                     <img
                       src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      alt="Trabajador de construcción 1"
+                      alt="Trabajador 1"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-56 h-56 rounded-full overflow-hidden bg-gray-200 shadow-lg">
                     <img
                       src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=600"
-                      alt="Trabajador de construcción 2"
+                      alt="Trabajador 2"
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
+
                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl shadow-xl p-5 flex items-center gap-4 w-80">
                   <div className="bg-yellow-400 p-3 rounded-xl flex-shrink-0">
                     <Wrench className="w-7 h-7 text-gray-800" />
@@ -154,6 +136,7 @@ function App() {
                     <div className="text-gray-600">Chalan</div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -167,8 +150,8 @@ function App() {
           <p className="text-center text-gray-700 italic max-w-4xl mx-auto mb-16 text-lg leading-relaxed">
             Un equipo de trabajo es un grupo de personas que colaboran con una meta en común. Cada miembro aporta sus habilidades y conocimientos únicos para alcanzar objetivos compartidos.
           </p>
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {/* Miembros del equipo */}
             {[
               {
                 name: 'Sarahi De Leon',
@@ -198,13 +181,22 @@ function App() {
             ].map((member, index) => (
               <div key={index} className="bg-gray-100 rounded-3xl p-6 text-center">
                 <div className="bg-white rounded-2xl overflow-hidden mb-4 shadow-md">
-                  <img src={member.img} alt={member.name} className="w-full h-48 object-cover" />
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className={`w-full h-48 object-cover object-center rounded-2xl ${
+                      member.img === fotoTony || member.img === fotoCuauh
+                        ? "scale-125"
+                        : ""
+                    }`}
+                  />
                 </div>
                 <h3 className="font-bold text-lg">{member.name}</h3>
                 <p className="text-gray-600 italic">{member.role}</p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -232,6 +224,7 @@ function App() {
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
