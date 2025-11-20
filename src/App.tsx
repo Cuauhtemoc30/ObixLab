@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Wrench, Twitter, Facebook, Instagram, Menu, X } from 'lucide-react';
+import fotoSara from "./img/foto_sara.jpg";
+import fotoTony from "./img/foto_tony.jpg";
+import fotoCuauh from "./img/foto_cuauh.png";
+
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -169,7 +173,7 @@ function App() {
               {
                 name: 'Sarahi De Leon',
                 role: 'Developer',
-                img: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+                img: fotoSara,
               },
               {
                 name: 'Jesus Morales',
@@ -184,12 +188,12 @@ function App() {
               {
                 name: 'Antonio Urrutia',
                 role: 'Front End',
-                img: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400',
+                img: fotoTony,
               },
               {
                 name: 'Cuauhtémoc Montoya',
                 role: 'Scrum Master',
-                img: 'https://cdn.pixabay.com/photo/2025/01/26/01/59/man-9360063_1280.png',
+                img: fotoCuauh,
               },
             ].map((member, index) => (
               <div key={index} className="bg-gray-100 rounded-3xl p-6 text-center">
