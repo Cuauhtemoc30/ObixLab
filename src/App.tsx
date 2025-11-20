@@ -60,20 +60,6 @@ function App() {
             <p className="text-gray-600 mb-12 text-lg">
               Conectamos profesionales de la construcción con las mejores oportunidades laborales. Miles de ofertas actualizadas diariamente.
             </p>
-            <div className="flex gap-12 flex-wrap">
-              <div>
-                <div className="text-4xl font-bold">15,000+</div>
-                <div className="text-gray-600">Trabajos Activos</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold">8,500+</div>
-                <div className="text-gray-600">Empresas</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold">50,000+</div>
-                <div className="text-gray-600">Profesionales</div>
-              </div>
-            </div>
           </div>
 
           <div className="relative mt-8 lg:mt-0">
